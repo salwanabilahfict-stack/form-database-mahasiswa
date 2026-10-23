@@ -1,0 +1,52 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --blue: #2857b8; --blue-dark: #1e4294; --ink: #243247; --muted: #718096; --line: #e4eaf2; --bg: #f4f7fb; --white: #fff; }
+body { font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--bg); min-height: 100vh; }
+.topbar { min-height: 70px; padding: 0 6%; display: flex; align-items: center; justify-content: space-between; background: var(--white); border-bottom: 1px solid var(--line); }
+.brand { font-size: 21px; font-weight: 800; letter-spacing: -.5px; }
+.brand span { color: var(--blue); }
+.top-note { color: var(--muted); font-size: 13px; }
+.container { width: min(1100px, 90%); margin: 34px auto; }
+.page-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.eyebrow { color: var(--blue); font-weight: 700; font-size: 11px; letter-spacing: 1.5px; margin-bottom: 9px; }
+h1 { font-size: clamp(27px, 4vw, 35px); margin-bottom: 8px; }
+.subtitle, .section-heading p { color: var(--muted); line-height: 1.6; font-size: 14px; }
+.heading-mark { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; color: var(--blue); background: #e9efff; font-weight: 800; }
+.form-card, .table-card { background: var(--white); border: 1px solid var(--line); border-radius: 15px; padding: 25px; margin-bottom: 22px; box-shadow: 0 7px 22px rgba(30,55,90,.04); }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 22px; }
+.section-heading h2 { font-size: 19px; margin-bottom: 7px; }
+.student-form { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field label { font-size: 13px; font-weight: 700; }
+input, select { width: 100%; padding: 12px 13px; border: 1px solid #d7dfeb; border-radius: 8px; background: #fff; color: var(--ink); font: inherit; font-size: 14px; outline: none; }
+input:focus, select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(40,87,184,.1); }
+.form-actions { display: flex; justify-content: flex-end; align-items: end; gap: 10px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border: 0; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 700; cursor: pointer; }
+.btn-primary { color: #fff; background: var(--blue); }
+.btn-primary:hover { background: var(--blue-dark); }
+.btn-light { color: #4b5b70; background: #edf1f7; }
+.status-pill { background: #e8f7ef; color: #20804d; border-radius: 20px; padding: 7px 12px; font-size: 12px; font-weight: 700; }
+.table-placeholder { border: 1px dashed #cbd6e5; border-radius: 12px; background: #fafcff; text-align: center; padding: 34px 18px; }
+.placeholder-icon { color: var(--blue); font-size: 32px; margin-bottom: 12px; }
+.table-placeholder h3 { font-size: 16px; margin-bottom: 8px; }
+.table-placeholder p { color: var(--muted); font-size: 13px; margin-bottom: 18px; line-height: 1.6; }
+.footer { display: flex; justify-content: space-between; gap: 12px; padding: 18px 2px; color: var(--muted); font-size: 12px; }
+.message { padding: 13px 15px; border-radius: 9px; margin-bottom: 18px; font-size: 14px; }
+.success { background: #e8f7ef; color: #17663d; }
+.error { background: #fff0f0; color: #a52b2b; }
+.data-table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 13px 12px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+th { background: #f6f8fc; color: #526178; font-size: 12px; text-transform: uppercase; letter-spacing: .4px; }
+tr:last-child td { border-bottom: 0; }
+.action-link { color: var(--blue); text-decoration: none; font-weight: 700; }
+.action-link.delete { color: #c24141; }
+@media (max-width: 700px) {
+  .topbar { padding: 0 5%; }
+  .container { width: 92%; margin: 24px auto; }
+  .form-card, .table-card { padding: 18px; }
+  .student-form { grid-template-columns: 1fr; }
+  .form-actions { justify-content: stretch; }
+  .form-actions .btn { flex: 1; }
+  .heading-mark { width: 45px; height: 45px; }
+  .footer { flex-direction: column; }
+}

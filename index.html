@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Kampus<span>Data</span></div>
+    <div class="top-note">Pemrograman Web 1</div>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow">DATA AKADEMIK</p>
+        <h1>Data Mahasiswa</h1>
+        <p class="subtitle">Kelola data mahasiswa dalam satu halaman.</p>
+      </div>
+      <div class="heading-mark">DM</div>
+    </section>
+
+    <section class="form-card">
+      <div class="section-heading">
+        <div>
+          <h2>Tambah Mahasiswa</h2>
+          <p>Isi data di bawah ini untuk menambahkan mahasiswa.</p>
+        </div>
+      </div>
+      <form action="simpan.php" method="post" class="student-form">
+        <div class="field">
+          <label for="nim">NIM</label>
+          <input id="nim" name="nim" type="text" maxlength="15" placeholder="Contoh: 2026005" required>
+        </div>
+        <div class="field">
+          <label for="nama">Nama lengkap</label>
+          <input id="nama" name="nama" type="text" maxlength="100" placeholder="Masukkan nama mahasiswa" required>
+        </div>
+        <div class="field">
+          <label for="jurusan">Jurusan</label>
+          <select id="jurusan" name="jurusan" required>
+            <option value="">Pilih jurusan</option>
+            <option>Informatika</option>
+            <option>Sistem Informasi</option>
+            <option>Teknik Industri</option>
+            <option>Manajemen</option>
+            <option>Akuntansi</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="semester">Semester</label>
+          <select id="semester" name="semester" required>
+            <option value="">Pilih semester</option>
+            <option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option>
+            <option value="7">7</option><option value="8">8</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ipk">IPK</label>
+          <input id="ipk" name="ipk" type="number" min="0" max="4" step="0.01" placeholder="Contoh: 3.75" required>
+        </div>
+        <div class="form-actions">
+          <button type="reset" class="btn btn-light">Kosongkan</button>
+          <button type="submit" class="btn btn-primary">Simpan Data</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="table-card">
+      <div class="section-heading table-heading">
+        <div>
+          <h2>Daftar Mahasiswa</h2>
+          <p>Data yang tersimpan di database akan muncul di sini.</p>
+        </div>
+        <span class="status-pill">MySQL</span>
+      </div>
+      <div class="table-placeholder">
+        <div class="placeholder-icon">▦</div>
+        <h3>Daftar data ditampilkan melalui PHP</h3>
+        <p>Jalankan website melalui Laragon agar data dari database muncul.</p>
+        <a class="btn btn-primary" href="mahasiswa.php">Lihat Data Mahasiswa</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Tugas Pemrograman Web 1</span>
+      <span>Form Data Mahasiswa</span>
+    </footer>
+  </main>
+</body>
+</html>
